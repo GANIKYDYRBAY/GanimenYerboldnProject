@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 const path = require('path');
 const ejs = require('ejs');
 const config = require('./config/mongo.config');
-const port = 3006;
+const port = process.env.PORT || 5000;
+
 
 //Views, css, static files//
 app.use(express.static(__dirname + '/public'));
